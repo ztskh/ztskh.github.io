@@ -156,6 +156,7 @@ var FacebookPersonWatcher = {
 		var _this = this;
 		return jQuery.getJSON('http://graph.facebook.com/' + this._input)
 			.then(function (data) {
+				console.log(234, data)
 				_this._name = data.name;
 				_this._id = data.id;
 			});
