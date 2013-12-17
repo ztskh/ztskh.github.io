@@ -116,6 +116,7 @@ var FacebookPhotoLikesSource = {
 	},
 	inspect_chunk : function (data) {
 		for (var like_index = 0; like_index < data.data.length; like_index++) {
+			console.log(data.data[like_index].id);
 			for (var watcher_id in watchers) {
 				if (watchers[watcher_id].code() == "facebook.person" && watchers[watcher_id]._id == data.data[like_index].id) {
 					start_alarm(this, watchers[watcher_id]);
