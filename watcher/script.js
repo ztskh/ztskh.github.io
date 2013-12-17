@@ -84,7 +84,6 @@ function remove_startup_message () {
 
 function show_startup_failed_message (err) {
 	remove_startup_message();
-	console.log(err);
 	jQuery('<div>').text('Не вдалось повноцінно запуститись').addClass('error').addClass('message').appendTo('.watcher-content .status').delay(3000).fadeOut();
 }
 
@@ -247,7 +246,8 @@ function add_object (section, classes) {
 				section.find('.new-entry .check-status').text("").show();
 				section.find('.new-entry .block').hide();
 			})
-			.fail(function () {
+			.fail(function (err) {
+				console.log(err);
 				section.find('.new-entry .check-status').text("помилка").show();
 			});
 	}
