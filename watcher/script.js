@@ -260,6 +260,7 @@ function monitoring_function () {
 	var now = new Date();
 	jQuery('.watcher-content .main-controls .update-status .update-time').text(now.getHours() + ":" + now.getMinutes() + ":" + now.getSeconds());
 	var promise = jQuery.when();
+	console.log('tick');
 	for (var id in sources) {
 		promise = promise.then(function(){return sources[id].inspect()});
 	}
