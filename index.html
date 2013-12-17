@@ -2,9 +2,94 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<title>ztskh</title>
+		<title>Вартовий</title>
+		<link href="reset.css" media="screen" rel="stylesheet" />
+		<link href="style-2.css" media="screen" rel="stylesheet" />
+		<script src="jquery.js"></script>
+		<script src="script-2.js"></script>
 	</head>
 	<body>
-		<a href="watcher">Вартовий</a>
+		<div class="watcher-content">
+			<div class="description-header block header">Пояснення</div>
+			<div class="description block">
+				Ця примітивна програмка грає обрану мелодію коли хтось з вибраних людей "лайкнув" одну з вибраних фоток. Таким чином можна передавати сигнал про небезпеку. З точки зору екології, хочу попередити - цілодобово включений комп'ютер - це не правильно.
+			</div>
+			<div class="status">
+				<div class="startup-message message">Зачекайте поки завантажаться налаштування. Для роботи сторінки повинен бути ввімкнений JavaScript.</div>
+			</div>
+			<div class="main-controls">
+				<div class="area">
+					<input type="button" value="Слідкувати" class="start" />
+				</div>
+				<div class="area">
+					<input type="button" value="Припинити слідкувати" class="stop" disabled="disabled" />
+				</div>
+				<div class="update-status">
+					Останнє оновлення в <span class="update-time">...</span>
+				</div>
+				<audio controls="controls" loop="loop">
+				</audio>
+			</div>
+			<div class="options-header block header">Налаштування</div>
+			<ul class="options block">
+				<li class="row">Перевіряти кожні <input type="text" class="interval" value="2,5" /> хв</li>
+				<li class="row sources">
+					Слідкувати за цими джерелами:
+					<ol class="list">
+					</ol>
+					<div class="new-entry folding">
+						<div class="header">Додати</div>
+						<div class="block">
+							<select class="type">
+								<option value="auto">визначити автоматично з адреси</option>
+								<option value="facebook.photo.likes">по номеру фото в facebook</option>
+							</select>
+							<input class="input" type="text" />
+							<div class="add-new-line">
+								<span class="check-status"></span><input type="button" class="add-new" value="Додати" />
+							</div>
+						</div>
+					</div>
+				</li>
+				<li class="row watchers">
+					Ці люди можуть дати сигнал тривоги:
+					<ol class="list">
+					</ol>
+					<div class="new-entry folding">
+						<div class="header">Додати</div>
+						<div class="block">
+							<select class="type">
+								<option value="auto">визначити автоматично з адреси</option>
+								<option value="facebook.person">по номеру або назві сторінки особи в facebook</option>
+							</select>
+							<input class="input" type="text" />
+							<div class="add-new-line">
+								<span class="check-status"></span><input type="button" class="add-new" value="Додати" />
+							</div>
+						</div>
+					</div>
+				</li>
+				<li class="row sound">
+					Завантажити аудіо:
+					<div class="source listed folding">
+						<div class="header">Вибрати з пропонованих</div>
+						<ul class="block list">
+						</ul>
+					</div>
+					<div class="source by-url folding">
+						<div class="header">Завантажити з інтернет адреси</div>
+						<div class="block">
+							<input type="text" class="url" />
+							<input type="button" value="Завантажити" class="load" />
+						</div>
+					</div>
+					<!--div class="source from-file folding">
+						<div class="header">Завантажити з файлу</div>
+						<input class="block" type="file" />
+					</div-->
+				</li>
+			</ul>
+			</div>
+		</div>
 	</body>
 </html>
