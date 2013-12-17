@@ -1,0 +1,67 @@
+.watcher-content {font-family: veranda; width: 400px; margin-left: auto; margin-right: auto; color: #333333; line-height: 1.5em}
+.watcher-content, .watcher-content > .block {box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box}
+.watcher-content > .block,
+.watcher-content .status,
+.watcher-content .main-controls {margin: 8px 4px 8px 4px; padding: 4px}
+
+.watcher-content .folding .block {margin: 8px 4px 8px 4px}
+
+.watcher-content .status .message {padding: 4px 8px 4px 8px}
+
+.watcher-content .main-controls {font-size: 0; text-align: center}
+.watcher-content .main-controls .update-status {margin-top: 6px}
+.watcher-content .main-controls .area {display: inline-block; width: 50%; font-size: 14px}
+.watcher-content .main-controls input {font-size: 16px; width: 120px; height: 60px; white-space: normal; vertical-align: top}
+.watcher-content .main-controls audio {margin-top: 18px}
+
+.watcher-content .options {list-style: inside; list-style-type: disk; padding: 0 8px 0 8px}
+.watcher-content .options > .row {margin: 8px 0 4px 0}
+.watcher-content .options .folding {margin-left: 20px}
+
+.watcher-content .options .interval {width: 6em; text-align: center}
+
+.watcher-content .options > .row > .list {border: 1px solid #A0AAA0; padding: 8px 0 8px 0; margin: 4px 0 4px 0}
+.watcher-content .options .new-entry .block .input,
+.watcher-content .options .new-entry .block .type {width: 100%; box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box}
+.watcher-content .options .new-entry .add-new-line {text-align: right}
+
+.watcher-content .options > .row > .list .code {margin-left: 6px; margin-right: 4px; border: 1px solid #AAAAAA; padding: 4px}
+.watcher-content .options > .row > .list a {padding: 4px; display: inline-block}
+.watcher-content .options > .row > .list .remove {margin-left: 4px; margin-right: 6px; padding: 4px}
+
+.watcher-content .options .sources .list .code {background-color: #CCCCDD}
+.watcher-content .options .watchers .list .code {background-color: #CCDDCC}
+
+.watcher-content .options > .sound .source {margin-bottom: 0.2em}
+.watcher-content .options > .sound .source .listed li {}
+
+
+.watcher-content > .header,
+.watcher-content .folding .header,
+.watcher-content .options > .sound .source.listed li {background-color: #DDDDDD; cursor: pointer}
+.watcher-content > .header:hover,
+.watcher-content .folding .header:hover,
+.watcher-content .options > .sound .source.listed li:hover {text-decoration: underline}
+
+.watcher-content,
+.watcher-content input,
+.watcher-content .main-controls .update-status {font-size: 12px}
+
+.watcher-content,
+.watcher-content > .block,
+.watcher-content > .status .message,
+.watcher-content .folding {border: 1px solid #AAAAAA; border-radius: 4px}
+.watcher-content .options > .sound .source.by-url .block {font-size: 0}
+.watcher-content .options > .sound .source.by-url .url {width: 70%; box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box}
+.watcher-content .options > .sound .source.by-url .load {width: 30%; box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box}
+
+
+.watcher-content .status .startup-message {text-align: center}
+
+
+
+.watcher-content .options > .sound .source .block,
+.watcher-content .main-controls .update-status,
+.watcher-content .options,
+.watcher-content .options > .row .new-entry .block
+{display: none}
