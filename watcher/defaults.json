@@ -8,11 +8,11 @@
 	],
 
 	"watchers" : [
-		{"type" : "facebook.person", "input" : "100007311393048"},
+		{"type" : "facebook.person", "input" : "100007311393048"}
 	],
 
 	"sources" : [
-		{"type" : "facebook.photo.likes", "input" : "1379284188991948"},
+		{"type" : "facebook.photo.likes", "input" : "1379284188991948"}
 	],
 
 	"tracks" : [
