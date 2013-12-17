@@ -82,13 +82,14 @@ function remove_startup_message () {
 	jQuery('.watcher-content .status .startup-message').fadeOut()
 }
 
-function show_startup_failed_message () {
+function show_startup_failed_message (err) {
 	remove_startup_message();
+	console.log(err);
 	jQuery('<div>').text('Не вдалось повноцінно запуститись').addClass('error').addClass('message').appendTo('.watcher-content .status').delay(3000).fadeOut();
 }
 
 function start_alarm (source, watcher) {
-	console.log('alarm');
+	//console.log('alarm');
 	jQuery('.watcher-content .main-controls audio').get(0).play();
 }
 
@@ -201,7 +202,7 @@ function add_source_object (source) {
 	jQuery('<li>')
 		.attr('id', source.id())
 		.append(jQuery('<span>').addClass('code').text(source.code()))
-		.append(jQuery('<a>').prop('href', source.href()).text(source.label()))
+		.append(jQuery('<a>').prop('target', '_blank').prop('href', source.href()).text(source.label()))
 		.append(jQuery('<span>').addClass('remove').prop('title', 'видалити').text('[X]'))
 		.appendTo('.watcher-content .options .sources .list');
 	sources[source.id()] = source;
@@ -211,7 +212,7 @@ function add_watcher_object (watcher) {
 	jQuery('<li>')
 		.attr('id', watcher.id())
 		.append(jQuery('<span>').addClass('code').text(watcher.code()))
-		.append(jQuery('<a>').prop('href', watcher.href()).text(watcher.label()))
+		.append(jQuery('<a>').prop('target', '_blank').prop('href', watcher.href()).text(watcher.label()))
 		.append(jQuery('<span>').addClass('remove').prop('title', 'видалити').text('[X]'))
 		.appendTo('.watcher-content .options .watchers .list');
 	watchers[watcher.id()] = watcher;
