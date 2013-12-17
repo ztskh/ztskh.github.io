@@ -1,0 +1,25 @@
+{
+	"format" : 3,
+
+	"sound" : [
+		{"type" : "audio/ogg", "src" : "TNM_Kongo-Tancyuvala_ryba_z_rakom.ogg"},
+		{"type" : "audio/mpeg", "src" : "TNM_Kongo-Tancyuvala_ryba_z_rakom.mp3"},
+		{"type" : "audio/aac", "src" : "TNM_Kongo-Tancyuvala_ryba_z_rakom.aac"}
+	],
+
+	"watchers" : [
+		{"type" : "facebook.person", "input" : "5kanal"},
+		{"type" : "facebook.person", "input" : "100001050660162"}
+	],
+
+	"sources" : [
+		{"type" : "facebook.photo.likes", "input" : "609417122428640"},
+		{"type" : "facebook.photo.likes", "input" : "563374353738350"}
+	],
+
+	"tracks" : [
+		"TNM_Kongo-Tancyuvala_ryba_z_rakom.ogg",
+		"TNM_Kongo-Tancyuvala_ryba_z_rakom.mp3",
+		"TNM_Kongo-Tancyuvala_ryba_z_rakom.aac"
+	]
+}
