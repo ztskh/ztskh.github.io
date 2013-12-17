@@ -247,7 +247,7 @@ function add_object (section, classes) {
 				section.find('.new-entry .block').hide();
 			})
 			.fail(function (err) {
-				console.log(123,err);
+				console.log(123,window.e1=err);
 				section.find('.new-entry .check-status').text("помилка").show();
 			});
 	}
