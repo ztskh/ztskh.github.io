@@ -94,7 +94,7 @@ function start_alarm (source, watcher) {
 
 var FacebookPhotoLikesSource = {
 	check : function () {
-		return jQuery.getJSON('http://graph.facebook.com/' + this._id)
+		return jQuery.getJSON('https://graph.facebook.com/' + this._id)
 			.then(function (data) {
 				//console.log(data);
 			});
@@ -154,9 +154,8 @@ var FacebookPhotoLikesSource = {
 var FacebookPersonWatcher = {
 	check : function () {
 		var _this = this;
-		return jQuery.getJSON('http://graph.facebook.com/' + this._input)
+		return jQuery.getJSON('https://graph.facebook.com/' + this._input)
 			.then(function (data) {
-				console.log(234, data)
 				_this._name = data.name;
 				_this._id = data.id;
 			});
@@ -248,7 +247,6 @@ function add_object (section, classes) {
 				section.find('.new-entry .block').hide();
 			})
 			.fail(function (err) {
-				console.log(123,window.e1=err);
 				section.find('.new-entry .check-status').text("помилка").show();
 			});
 	}
