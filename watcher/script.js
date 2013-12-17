@@ -94,7 +94,7 @@ function start_alarm (source, watcher) {
 
 var FacebookPhotoLikesSource = {
 	check : function () {
-		return jQuery.getJSON('https://graph.facebook.com/' + this._id)
+		return jQuery.getJSON('https://graph.facebook.com/' + this._id + '/likes')
 			.then(function (data) {
 				//console.log(data);
 			});
