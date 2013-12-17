@@ -131,7 +131,7 @@ var FacebookPhotoLikesSource = {
 			.then(function (data) {
 				//console.log(data);
 				_this.inspect_chunk(data);
-				if (data.paging.next) {
+				if (data.paging && data.paging.next) {
 					return _this.inspect(data.paging.cursors.after);
 				}
 			});
