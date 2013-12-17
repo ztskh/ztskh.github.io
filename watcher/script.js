@@ -293,7 +293,7 @@ jQuery(function () {
 	var config_url = location.hash.replace(/^#/, '');
 
 	if (config_url == '')
-		config_url = 'default-2.json'
+		config_url = 'defaults.json'
 
 	jQuery.getJSON(config_url)
 		.then(read_config)
