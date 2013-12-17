@@ -6,6 +6,8 @@
 
 .watcher-content .folding .block {margin: 8px 4px 8px 4px}
 
+.watcher-content .description p {text-indent: 1.2em}
+
 .watcher-content .status .message {padding: 4px 8px 4px 8px}
 
 .watcher-content .main-controls {font-size: 0; text-align: center}
