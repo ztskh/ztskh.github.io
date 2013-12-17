@@ -116,7 +116,7 @@ var FacebookPhotoLikesSource = {
 	},
 	inspect_chunk : function (data) {
 		for (var like_index = 0; like_index < data.data.length; like_index++) {
-			console.log(data.data[like_index].id);
+			//console.log(data.data[like_index].id);
 			for (var watcher_id in watchers) {
 				if (watchers[watcher_id].code() == "facebook.person" && watchers[watcher_id]._id == data.data[like_index].id) {
 					start_alarm(this, watchers[watcher_id]);
@@ -127,7 +127,7 @@ var FacebookPhotoLikesSource = {
 	inspect : function (after) {
 		var _this = this;
 		after = after ? '&after=' + after : ''
-		return jQuery.getJSON('http://graph.facebook.com/' + this._id + '/likes?limit=500' + after)
+		return jQuery.getJSON('https://graph.facebook.com/' + this._id + '/likes?limit=500' + after)
 			.then(function (data) {
 				//console.log(data);
 				_this.inspect_chunk(data);
@@ -261,7 +261,7 @@ function monitoring_function () {
 	var now = new Date();
 	jQuery('.watcher-content .main-controls .update-status .update-time').text(now.getHours() + ":" + now.getMinutes() + ":" + now.getSeconds());
 	var promise = jQuery.when();
-	console.log('tick');
+	//console.log('tick');
 	for (var id in sources) {
 		promise = promise.then(function(){return sources[id].inspect()});
 	}
